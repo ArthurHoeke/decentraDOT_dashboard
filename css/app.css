@@ -1,0 +1,203 @@
+@font-face {
+    font-family: "ClashDisplay";
+    src: url("../fonts/ClashDisplay-Regular.otf") format("opentype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "ClashDisplay";
+    src: url("../fonts/ClashDisplay-Semibold.otf") format("opentype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "ClashDisplay";
+    src: url("../fonts/ClashDisplay-Bold.otf") format("opentype");
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: "ClashDisplay";
+    src: url("../fonts/ClashDisplay-Medium.otf") format("opentype");
+    font-weight: 600;
+}
+
+body {
+    background-color: #0A0A0A;
+    background-image: url("../img/circles.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: "ClashDisplay";
+    color: white;
+}
+
+nav {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 50px;
+}
+
+nav svg {
+    margin-left: 50px;
+}
+
+nav button {
+    margin-right: 50px;
+    background-color: #E80370;
+    border-radius: 10px;
+    padding: 12px 20px;
+    color: white;
+    font-family: "ClashDisplay";
+    font-size: 16px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #E80370;
+    background: transparent;
+    color: #E80370;
+    font-weight: 600;
+}
+
+nav button svg {
+    margin-right: 5px;
+    margin-left: 0;
+    color: #E80370;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url("../img/gradient-mobile.svg");
+    background-size: cover;
+}
+
+main h1 {
+    font-size: 55px;
+    font-weight: bold;
+}
+
+main p {
+    color: #888888;
+    max-width: 600px;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+main button {
+    background-color: #E80370;
+    border-radius: 10px;
+    padding: 12px 45px;
+    color: white;
+    font-family: "ClashDisplay";
+    font-size: 16px;
+    margin-top: 60px;
+    border: none;
+    margin-bottom: 60px;
+    box-shadow: rgb(232 3 112) 0px 8px 24px;
+}
+
+@keyframes slide {
+    from {
+        left: 100%;
+        transform: translate(0, 0);
+    }
+    to {
+        left: -100%;
+        transform: translate(-100%, 0);
+    }
+}
+
+@-webkit-keyframes slide {
+    from {
+        left: 100%;
+        transform: translate(0, 0);
+    }
+    to {
+        left: -100%;
+        transform: translate(-100%, 0);
+    }
+}
+
+#scroll {
+    color: white;
+    opacity: .15;
+    width: 100%;
+    height: 120px;
+    line-height: 140px;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 62px;
+}
+
+#scroll .text {
+    position: absolute;
+    top: 0;
+    white-space: nowrap;
+    height: 120px;
+    font-size: 125px;
+    animation-name: slide;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: slide;
+    -webkit-animation-duration: 60s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+#scroll .text span {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50px;
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+@media only screen and (max-width: 767px) {
+    nav svg {
+        margin-left: 25px;
+    }
+    nav button {
+        margin-right: 25px;
+    }
+    main {
+        background-image: url(../img/gradient-mobile.svg);
+    }
+    main h1 {
+        text-align: center;
+        font-size: 35px;
+    }
+    main p {
+        font-size: 16px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    #scroll .text {
+        font-size: 45px;
+        -webkit-animation-duration: 30s;
+    }
+    #scroll .text span {
+        margin-bottom: 9px;
+    }
+}
